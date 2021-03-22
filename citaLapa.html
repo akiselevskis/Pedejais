@@ -8,15 +8,20 @@
         var kr=document.getElementById("krasa").value;
         document.getElementById("fons").style="background-color:"+kr;
     }
-    </script>
+        function rep() { 
+            document.body.innerHTML 
+                = document.body.innerHTML 
+                .replace("Izvēlies krāsu!", "Krāsa nomainīta!"); 
+        } 
+    </script> 
 </head>
 <body>
 <form>
-  <div id="demo" id="fons" style="background-color:lightgrey">Izvēlies krāsu!</div>
-  <input type="color" id="krasa" value="#00ff00" onclick="krasot();">
-
-<button type="button" onclick='document.getElementById("demo").
-            innerHTML = "Krāsa nomainīta"'>Click Me!</button>  
+  <div id="fons" style="background-color:lightgrey">Izvēlies krāsu!</div>
+  <input type="color" id="krasa" value="#00ff00">
+  
+  <input type="button" value="Nokrāsot!" onclick="krasot(); rep();">
+  
 </form>
 </body>
 </html>
